@@ -1,92 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="google-site-verification" content="jF2tbGuAp4T5cgJE0K3BMxnAx3nHJ1otors6CjE4LDw"/>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <meta/>
-
-    <meta charset="UTF-8" />
-    <meta name="keywords" content="portfolio, Digitial painter, animatior">
-    <link rel="shortcut icon" type= "x-icon" href= "Images/rose logo.png">
-    <meta name="description" content="Welcome to the portfolio of Euphoria Rose Studios | 
-    Marwan. Find gripping character design, traditional art, and illustrations! 🔥🌹">
-    
-    <title>Euphoria Rose website </title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euphoria Rose Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Futura:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="preloader"> </div>
-<section class="header">
-<nav> 
-    <a href="index.html"> <img src="Images/rose logo.png">
-        </a>
+    
+    <div class="slider">
         
-        <div class="navbar"> 
-            <ul>
-                <li> 
-                    <font face="cinzel"> 
-                        
-
-                    <a href="./digital paintings">Digital paintings</a>
-                    <a href="character design.html">Character Design</a>
-                    <a href="">Blog</a>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-        
-        
+        <div class="slide" id="section2">
+            <nav>
+            
+                <a href="">Illustrations</a>
+                <a href="">Character Design</a>
+                <a href="">Animations</a>
+                <button class="rose logo" onclick="changeSlide(1)">
+                    <img src="images/rose logo.png"/>
+                </button>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </nav>
+            <h2>Character Design</h2>
+            <p>Showcasing unique character designs and illustrations.</p>
         </div>
-<div class="nav-button"> 
-    <button class="btn"></button>
-</div>
+        
+        <div class="slide" id="section1">
+            <nav>
+                <a href="">Illustrations</a>
+                <a href="">Character Design</a>
+                <a href="">Animations</a>
+                <button class="rose logo" onclick="changeSlide(1)">
+                    <img src="images/rose logo.png"/>
+                </button>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+            </nav>
+            <h2>Euphoria Rose Studios</h2>
+            <p>Explore the beauty of digital painting techniques and styles.</p>
+        </div>
+        
+        <div class="slide" id="section3">
+            <nav>
+                <a href="">Illustrations</a>
+                <a href="">Character Design</a>
+                <a href="changeSlide(1)">Animations</a>
+     
+                <button class="rose logo" onclick="changeSlide(1)">
+                    <img src="images/rose logo.png"/>
+                </button>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+            </nav>
+            <h2>Animations</h2>
+            <p>Discover captivating animations and storytelling.</p>
+            <video autoplay loop muted plays-inline class="background-clip">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+        <div class="slide" id="section4">
+            <nav>
+            
+                <a href="">Illustrations</a>
+                <a href="">Character Design</a>
+                <a href="">Animations</a>
+                <button class="rose logo" onclick="changeSlide(1)">
+                    <img src="images/rose logo.png"/>
+                </button>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+            </nav>
+            <h2>Illustrations</h2>
+            <p>Discover captivating animations and storytelling.</p>
+        </div>
+    </div>
 
+    <!-- Other Sections -->
+    <div class="about-me" id="aboutMe">
+        <h2>About Me</h2>
+        <p>Find out more about me in the about section 
 
-</nav>
-<div class="containerE">
-    <h1>
-        <span>Euphoria Rose Studios</span>
-    </h1>
-</div>
-<div class="text-box">
-<p> Illustrator and Designer</p>
+            Get to know me and my art.
+            
+            Enjoy scrolling! 🔥🌹
+            See you around
+            
+            Within my time of studying illustration, I have completed 5 Udemy courses and 2 Domestika courses. They have centred around the studying of character design, general digital art and painting with colour.  The most impactful courses  being "The ultimate digital painting course" and "Digital fantasy portraits with photoshop" on Udemy and Domestika respectively.  
+            what have I done?
+            
+            My name is Euphoria Rose
+            
+            ​I am an illustrator that specializes in both traditional and digital illustration; I also have experience with digital design, but I intend to make my piece de le resistance with digital painting.</p>
+    </div>
+   
+    <div class="portfolio" id="portfolio">
+        <div class="text-box2">
+            <h1> portfolio</h1>
+            <h2>A Raident <br>showcase</h2>
+            <font face="futra light"> 
+            <p>View the Digital Art section for art<br>
+                similar to this, view the sample gallery to see the best of my creations.<br>
+                Enjoy scrolling through my - fantasy illustrations
+            </p>
+    </div>
+    
+    <div class="character-details" id="characterDetails">
+        <h2>Character Details</h2>
+        <div class="img-gallery">
+            <img src="Images/(P8) Crimson Terror.jpg" alt="Character 1">
+            <img src="Images/(P16) Character Ignite Blood.png" alt="Character 2">
+            <img src="Images/(P16) Character Ignite Desire.png" alt="Character 3">
+            <img src="Images/(P16) Character Ignite Fear.png" alt="Character 4">
+        </div>
+    </div>
 
+    
 
-</div>
-</section>
+    <div class="controls">
+        <button class="image-button" onclick="changeSlide(0)">
+            <img src="images/buttons png.png" alt="Button Image" class="swap-img" style="width: 300px;" onmouseover="this.src='images/buttons png hover.png'" onmouseout="this.src='images/buttons png.png'"/>
+        </button>
+        <button class="image-button" onclick="changeSlide(2)">
+            <img src="images/buttons png.png" alt="Button Image" class="swap-img" style="width: 300px;" onmouseover="this.src='images/(P12) Carnation.png'" onmouseout="this.src='images/buttons png.png'"/>
+        </button>
+        
+        <button class="image-button" onclick="changeSlide(3)">
+            <img src="images/buttons png.png" alt="Button Image" class="swap-img" style="width: 300px;" onmouseover="this.src='images/(P12) Carnation.png'" onmouseout="this.src='images/buttons png.png'"/>
+        </button>
+    </div>
 
-<section class="portfolio">
-    <div class="text-box2">
-    <h1> portfolio</h1>
-    <h2>A Raident showcase</h2>
-    <p>View the Digital Art section for art 
-        similar to this, view the sample gallery to see the best of my creations.
-        Enjoy scrolling through my - fantasy illustrations
-    </p>
-</section>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   <script>
-        var loader = document.getElementById("preloader"); 
+    <script src="script.js"></script>
+    <script>
+        let currentSlide = 1; // Default slide is Digital Painting
 
-        window.addEventListener("load", function(){
-            loader.style.display= "none"; 
-        })
+        window.onload = function() {
+            changeSlide(1); // Ensure the first slide is shown on load
+        }
+
+        function changeSlide(slideIndex) {
+            const slides = document.querySelectorAll('.slide');
+            const aboutMeSection = document.getElementById('aboutMe');
+            const characterDetailsSection = document.getElementById('characterDetails');
+
+            currentSlide = slideIndex;
+            const offset = -currentSlide * 100;
+            document.querySelector('.slider').style.transform = `translateX(${offset}vw)`;
+
+            if (currentSlide === 0) {
+                aboutMeSection.style.display = 'none'; 
+                characterDetailsSection.style.display = 'block';
+            } else if (currentSlide === 1) {
+                aboutMeSection.style.display = 'block'; 
+                characterDetailsSection.style.display = 'none'; 
+            } else {
+                aboutMeSection.style.display = 'none'; 
+                characterDetailsSection.style.display = 'none'; 
+            }
+        }
     </script>
-
-
-
-
-</body>
-</html>
-
-
-
 </body>
 </html>
