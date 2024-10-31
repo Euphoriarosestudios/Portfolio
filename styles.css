@@ -39,7 +39,7 @@ nav a:hover {
 .slider {
     display: flex;
     transition: transform 0.5s ease;
-    width: 300%;
+    width: 400%;
 }
 
 .slide h2, .slide p {
@@ -59,7 +59,7 @@ nav a:hover {
     position: relative;
 }
 
-#section1, #section2, #section3 {
+#section1, #section2, #section3, #section4  {
     background-size: cover;
     background-position: center;
 }
@@ -72,6 +72,11 @@ nav a:hover {
     background-image: url(Images/\(C.I.\)\ Twitter\ banner.png);
 }
 
+#section4 {
+    background-image: url(Images/\(P16\)\ Character\ Ignite\ Truth.png);
+
+
+}
 .controls {
     position: fixed;
     top: 50%;
@@ -92,4 +97,33 @@ nav a:hover {
     border: none; /* Ensures no border is applied */
     padding: 0; /* Removes any padding around the image */
     display: block; /* Helps remove inline spacing */
+}
+
+.illustrations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.img-gallery img {
+    width: 100%;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.1); /* Add a hover effect */
+}
+.portfolio{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/blood\ prince\ alt.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    scroll-behavior:smooth
+
 }
