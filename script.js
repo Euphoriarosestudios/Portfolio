@@ -27,3 +27,12 @@ function changeSlide(slideIndex) {
         characterDetailsSection.style.display = 'none'; 
     }
 }
+function showIllustrations() {
+    // Hide other sections
+    document.getElementById('aboutMe').style.display = 'none';
+    document.getElementById('characterDetails').style.display = 'none';
+
+    // Show the "Illustrations" section
+    document.getElementById('illustrationsSection').style.display = 'block';
+}
+
