@@ -11,13 +11,16 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 30px 0;
    
 }
-
+.nav button{
+    width: 50%;
+    padding-top: -10px;
+}
 nav a {
     color: white; /* Text color */
-    text-decoration: none;
+    text-decoration: none; 
     margin: 0 90px; /* Space between links */
     font-family: 'Futura', sans-serif; /* Font style */
     font-weight: 300;
@@ -25,13 +28,41 @@ nav a {
 }
 
 
+.text-button{
+    font-family: cinzel;
+    background: none; /* No background */
+    border: none;     /* No border */
+    color: white;     /* Text color */
+    font-size: 16px;  /* Adjust font size */
+    cursor: pointer;  /* Pointer cursor to indicate it's clickable */
+    text-decoration: none; /* No underline for links */
+    padding: 0;       /* Remove padding for a clean look */
+    margin: 0;        /* Optional: remove margin */
+    font-family: inherit; /* Ensure it matches your website's font */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px  
+}
+.text-button:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+    color: #38003a; /* Optional: Change color on hover */
+}
+.text-button:active {
+    color: #38003a; /* Optional: Slightly darker color when clicked */
+}
+
+
+
 
 Nav Img{
     width: 100px;
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 nav a:hover {
-    color: #ccc; /* Hover effect */
+    color: #38003a
 }
 
 
@@ -39,7 +70,7 @@ nav a:hover {
 .slider {
     display: flex;
     transition: transform 0.5s ease;
-    width: 400%;
+    width: calc(100vw * 4); /* Adjust width to include all slides */
 }
 
 .slide h2, .slide p {
@@ -47,17 +78,35 @@ nav a:hover {
 }
 
 .slide {
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 0px); /* Account for scrollbars in viewport width */
+    height: calc(100vh - 0px); /* Full viewport height without any offsets */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: auto;
-    padding: 20px;
+    overflow: hidden;
+    padding: 0;
     position: relative;
+    background-size: cover;
+    background-position: center;
 }
+.text-euphoria{
+    margin: 0px 0 -100px; 
+    font-size: 100px;
+}
+.mini-text{
+    letter-spacing: 20px ;
+    color: #fff;
+    font-size: 25px;
+    color: #fff;
+}
+.generalminiheader{
+    font-size: 25px;
+    color: #fff;
+}
+
+
 
 #section1, #section2, #section3, #section4  {
     background-size: cover;
@@ -65,17 +114,24 @@ nav a:hover {
 }
 
 #section1 {
-    background-image: url(Images/\(C.I.\)\ Twitter\ banner.png);
+    background-image: url(Images/Background\ Banner\ rose.jpg);
 }
 
 #section2 {
-    background-image: url(Images/\(C.I.\)\ Twitter\ banner.png);
+    background-image: url(Images/CHARACTER\ DESIGN.jpg);
+}
+#section3 {
+    background-image: url(Images/\(P16\)\ Character\ Ignite\ Desire.png);
 }
 
 #section4 {
     background-image: url(Images/\(P16\)\ Character\ Ignite\ Truth.png);
 
 
+}
+
+.image-button{
+    width: 50%;
 }
 .controls {
     position: fixed;
@@ -85,19 +141,30 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
+  height: 100px;
 }
 .image-button {
     background: transparent; /* Remove background color */
     border: none; /* Remove border */
     padding: 0; /* Remove padding if needed */
     cursor: pointer; /* Change cursor to pointer */
+    background: none;
 }
 .rose-logo img {
-    background: none; /* Removes any background color */
-    border: none; /* Ensures no border is applied */
-    padding: 0; /* Removes any padding around the image */
-    display: block; /* Helps remove inline spacing */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding if needed */
+    cursor: pointer; /* Change cursor to pointer */
+    background: none;
 }
+
 
 .illustrations {
     display: flex;
