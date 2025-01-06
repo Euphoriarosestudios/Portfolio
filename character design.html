@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="with=device-width, inital-scale=1.0">
-    <meta/>
-
-    <meta charset="UTF-8" />
-    <title>Euphoria Rose website </title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="portfolio, Digitial painter, animatior, Splash art">
+        
+    
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Euphoria Rose Studios Website" />
+    <link rel="manifest" href="/Euphoria Rose Studios Website/site.webmanifest" />
+    
+    
+       
+    
+        <meta name="description" content="Explore the captivating portfolio of Euphoria Rose Studios by Marwan Salah-Bennani.
+         Discover stunning character designs, traditional art, and illustrations that ignite creativity. ">
+    
+    
+        <meta name="author" content="Marwan Salah-Bennani">
+    
+        <title>Euphoria Rose Studios</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Futura:wght@300&display=swap" rel="stylesheet">
+        
+    </head>
 <body>
-<section class="header">
-<nav> 
-    <a href="index.html"> <img src="Images/rose logo.png">
-        </a>
-        
-        <div class="nav-links"> 
-            <ul>
-                <li> 
-                    <a href="digital paintings.html">Digital paintings</a>
-                    <a href="character design.html">Character Design</a>
-                    <a href="">Blog</a>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-        
-        
+    <div id="preloader"> </div>
+    <header>
+        <div class="logo">
+            <img src="images/rose logo.png" alt="Euphoria Rose Studios Logo"> 
+            <a href="index.html">Euphoria Rose Studios</a>
         </div>
-<div class="nav-button"> 
-    <button class="btn"></button>
-</div>
-
-
-</nav>
-<div class="img-gallery">
-    <img src="Character deisgn/(P13) Character example sheet.png">
+        <nav>
+            <a href="digital paintings.html">Illustrations</a>
+            <a href="character design.html">Character Design</a>
+            <a href="#animations">Animations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
     
 
-</div>
+
+
+    <div class="character-container">
+        <!-- Thumbnail Image -->
+        <img src="Images/(P12) Carnation.png" alt="Thumbnail" class="thumbnail" />
+    
+        <!-- Background Image -->
+        <img src="Images/Background Banner rose.jpg" alt="Background" class="background" />
+    
+        <!-- Pop-Out Image -->
+        <img src="Images/rose logo.png" alt="Pop-Out Character" class="pop-out" />
+    </div>
+    
+      
 </section>
+<script>
+    var loader = document.getElementById("preloader"); 
+
+    window.addEventListener("load", function(){
+        loader.style.display= "none"; 
+    })
+</script>
     
 </body>
 </html>
