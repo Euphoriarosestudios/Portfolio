@@ -1,196 +1,392 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    color: white;
-    overflow-x: hidden;
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-   
-}
-.nav button{
-    width: 50%;
-    padding-top: -10px;
-}
-nav a {
-    color: white; /* Text color */
-    text-decoration: none; 
-    margin: 0 90px; /* Space between links */
-    font-family: 'Futura', sans-serif; /* Font style */
-    font-weight: 300;
-    font-size: 16px;
-}
-
-
-.text-button{
-    font-family: cinzel;
-    background: none; /* No background */
-    border: none;     /* No border */
-    color: white;     /* Text color */
-    font-size: 16px;  /* Adjust font size */
-    cursor: pointer;  /* Pointer cursor to indicate it's clickable */
-    text-decoration: none; /* No underline for links */
-    padding: 0;       /* Remove padding for a clean look */
-    margin: 0;        /* Optional: remove margin */
-    font-family: inherit; /* Ensure it matches your website's font */
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px  
-}
-.text-button:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
-    color: #38003a; /* Optional: Change color on hover */
-}
-.text-button:active {
-    color: #38003a; /* Optional: Slightly darker color when clicked */
-}
-
-
-
-
-Nav Img{
-    width: 100px;
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-nav a:hover {
-    color: #38003a
-}
-
-
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: calc(100vw * 4); /* Adjust width to include all slides */
-}
-
-.slide h2, .slide p {
-    margin-top: 80px; /* Add margin to account for the height of the nav */
-}
-
-.slide {
-    width: calc(100vw - 0px); /* Account for scrollbars in viewport width */
-    height: calc(100vh - 0px); /* Full viewport height without any offsets */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
     padding: 0;
-    position: relative;
+    font-family: 'Cinzel', serif;
+    color: white;
+    background-color: #150021;
+    overflow-x: hidden;
+    
+  }
+
+  /* Homepage Styles */
+  .homepage {
+    background: url('images/\(P16\)\ Character\ Ignite\ Fear.png') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-}
-.text-euphoria{
-    margin: 0px 0 -100px; 
-    font-size: 100px;
-}
-.mini-text{
-    letter-spacing: 20px ;
-    color: #fff;
-    font-size: 25px;
-    color: #fff;
-}
-.generalminiheader{
-    font-size: 25px;
-    color: #fff;
-}
-
-
-
-#section1, #section2, #section3, #section4  {
-    background-size: cover;
-    background-position: center;
-}
-
-#section1 {
-    background-image: url(Images/Background\ Banner\ rose.jpg);
-}
-
-#section2 {
-    background-image: url(Images/CHARACTER\ DESIGN.jpg);
-}
-#section3 {
-    background-image: url(Images/\(P16\)\ Character\ Ignite\ Desire.png);
-}
-
-#section4 {
-    background-image: url(Images/\(P16\)\ Character\ Ignite\ Truth.png);
-
-
-}
-
-.image-button{
-    width: 50%;
-}
-.controls {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-  height: 100px;
-}
-.image-button {
-    background: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    padding: 0; /* Remove padding if needed */
-    cursor: pointer; /* Change cursor to pointer */
-    background: none;
-}
-.rose-logo img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background: transparent; /* Remove background color */
-    border: none; /* Remove border */
-    padding: 0; /* Remove padding if needed */
-    cursor: pointer; /* Change cursor to pointer */
-    background: none;
-}
-
-
-.illustrations {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
-    color: white;
-}
-.img-gallery img {
-    width: 100%;
-    margin: 10px;
-    transition: transform 0.3s ease;
-}
+  }
 
-.img-gallery img:hover {
-    transform: scale(1.1); /* Add a hover effect */
-}
-.portfolio{
+  .homepage-text {
+    position: absolute; /* Keeps it fixed in place */
+    z-index: 1000; /* Ensures it stays on top */
+  }
+
+  .homepage-text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  .homepage-text .decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .homepage-text .decorative-line::before,
+  .homepage-text .decorative-line::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: white;
+    margin: 0 10px;
+  }
+
+  .homepage-text h2 {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    letter-spacing: 8px;
+    margin: 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between images */
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* Allows scrolling if images exceed the viewport */
+  }
+
+  .gallery img {
+    display: block;
+    object-fit: contain; /* Keeps images' original proportions */
+    height: auto;
+    max-height: calc(100vh / 3); /* Ensures images fit vertically */
+    max-width: calc(100vw / 3); /* Ensures images fit horizontally */
+    cursor: pointer; /* Indicates clickable images */
+  }
+
+  /* Optional hover effect */
+  .gallery img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  /* Full-screen popup styles */
+  .popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent overlay */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding-top: 50px; /* Space for close button */
+    overflow-y: auto; /* Allow scroll within the popup */
+  }
+
+  .popup img {
+    max-width: 90%;
+    max-height: 60%; /* Ensure image fits properly */
+    object-fit: contain; /* Keeps image proportions */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Optional: Add glow effect */
+    border: 2px solid white; /* Optional: Add white border */
+    margin-bottom: 20px; /* Space between image and text */
+  }
+
+  .popup .description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    font-family: 'Arial', sans-serif; /* Optional font choice */
+  }
+
+  .popup .additional-info {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1100;
+  }
+
+  .popup .close:hover {
+    color: #f00; /* Change color on hover */
+  }
+
+  /* Navigation buttons */
+  .popup .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1100;
+    transition: color 0.3s ease;
+  }
+
+  .popup .nav-button:hover {
+    color: #f00; /* Change color on hover */
+  }
+
+  .popup .left {
+    left: 20px;
+  }
+
+  .popup .right {
+    right: 20px;
+  }
+  /* Header Styles */
+  header {
+    position: fixed; /* Keeps the header at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    
+  }
+
+  header nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+  }
+
+  header nav a:hover {
+    color: #8500a1;
+  }
+
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  header .logo h1 {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    color: white;
+    margin: 0;
+  }
+
+  /* New Sections Styles */
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f0f0f0; /* Default background for new sections */
+  }
+
+  .section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #150021
+  }
+
+  .section p {
+    font-family: 'Futura Light', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 700px) {
+    .homepage-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .homepage-text h2 {
+      font-size: 1.2rem;
+    }
+
+    .section h1 {
+      font-size: 2rem;
+    }
+  }
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Footer Navigation Links */
+  .footer-nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  .footer-nav a {
+    color: #fff;
+   
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover {
+    color: #800080; /* Purple hover color */
+  }
+
+  /* Social Media Section */
+  .social-media {
+    display: flex;
+    gap: 20px;
+  }
+
+  .social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .social-media a:hover {
+    color: #800080; /* Purple hover color */
+  }
+
+  /* Scroll to Top Button */
+  .scroll-to-top {
+    background-color: #800080; /* Purple button */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #6a006a; /* Darker purple on hover */
+  }
+
+  .portfolio{
     min-height: 100vh;
     width: 100%;
-    background-image: url(images/blood\ prince\ alt.png);
+    background-image: url(Images/Day\ and\ Night.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
     scroll-behavior:smooth
 
+}
+.img-gallery{
+  width: 100%;
+  
+  display: list-item;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.img-gallery img{
+  width: 100%;
+  cursor: pointer;
+
+}
+
+.character-container {
+  position: relative;
+  width: 300px; /* Adjust width */
+  height: 400px; /* Adjust height */
+  overflow: hidden;
+}
+
+.character-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease; /* Smooth transitions for all effects */
+}
+
+/* Thumbnail: Default State */
+.thumbnail {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Background: Hidden Initially */
+.background {
+  opacity: 0;
+  z-index: 0;
+  transform: scale(1);
+}
+
+/* Pop-Out Image: Hidden Initially */
+.pop-out {
+  opacity: 0;
+  z-index: 2;
+  transform: scale(1.2); /* Slightly larger than thumbnail */
+}
+
+/* Hover Effect */
+.character-container:hover .thumbnail {
+  opacity: 0; /* Hide thumbnail */
+  transform: scale(0.9); /* Slight shrink effect */
+}
+
+.character-container:hover .background {
+  opacity: 1; /* Show background */
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+.character-container:hover .pop-out {
+  opacity: 1; /* Show pop-out */
+  transform: scale(1.4); /* Pop-out image grows larger */
 }
