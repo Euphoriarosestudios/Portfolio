@@ -13,17 +13,27 @@ body {
     overflow-x: hidden;
     
   }
+  
 
   /* Homepage Styles */
   .homepage {
-    background: url('images/\(P16\)\ Character\ Ignite\ Fear.png') no-repeat center center fixed;
+    background: url('images/\(P16\)\ Character\ Ignite\ Truth\ 7\ \(75\ percent\ quality\).jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-height: 100vh; /* Ensures at least viewport height but grows with content */
+      padding: 0;
+      margin: 0;
   }
+  
+  .homepage-text {
+      padding: 0;
+      margin: 0 auto; /* Center the text horizontally */
+  }
+  
 
   .homepage-text {
     position: absolute; /* Keeps it fixed in place */
@@ -389,4 +399,7 @@ body {
 .character-container:hover .pop-out {
   opacity: 1; /* Show pop-out */
   transform: scale(1.4); /* Pop-out image grows larger */
+}
+:root {
+  --vh: 1vh; /* Default to 1% of viewport height */
 }
