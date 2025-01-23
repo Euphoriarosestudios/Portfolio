@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 
 body {
     margin: 0;
@@ -13,6 +19,10 @@ body {
     overflow-x: hidden;
     
   }
+  .homepage {
+    width: 100%; /* Replace 100vw */
+}
+
   
 
   /* Homepage Styles */
@@ -39,6 +49,68 @@ body {
     position: absolute; /* Keeps it fixed in place */
     z-index: 1000; /* Ensures it stays on top */
   }
+ 
+ 
+ 
+ 
+ 
+  .character-container {
+    position: relative;
+    /* Adjust size to your design */
+    overflow: hidden;
+}
+
+.character-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    object-fit: cover;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* Thumbnail: Default State */
+.thumbnail {
+    opacity: 1;
+    z-index: 2; /* Ensure it's above other images */
+}
+
+/* Hover Image: Hidden by Default */
+.hover-image {
+    opacity: 0;
+    z-index: 3; /* On top of thumbnail */
+}
+
+/* Hover Effect: Show hover-image and hide thumbnail */
+.character-container:hover .thumbnail {
+    opacity: 0;
+    transform: scale(1.1); /* Optional zoom-out effect */
+}
+
+.character-container:hover .hover-image {
+    opacity: 1;
+    transform: scale(1); /* Ensure hover image scales correctly */
+}
+
+/* Background Image */
+.background {
+    z-index: 1; /* Behind thumbnail and hover image */
+    filter: blur(5px); /* Optional blur effect for depth */
+}
+
+/* Pop-Out Image */
+.pop-out {
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.9); /* Slightly smaller initially */
+}
+
+.character-container:hover .pop-out {
+    opacity: 1;
+    transform: scale(1); /* Pops out smoothly */
+}
+
 
   .homepage-text h1 {
     font-size: 4rem;
@@ -76,12 +148,44 @@ body {
     padding: 10px;
     width: 100vw;
     height: 100vh;
-    overflow-y: auto; /* Allows scrolling if images exceed the viewport */
+   
   }
 
+ 
+        
+        .animation-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .animation-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .animation-video {
+            margin-bottom: 20px;
+        }
+
+        .animation-video video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .animation-description {
+            font-size: 1rem;
+            max-width: 800px;
+            line-height: 1.5;
+        }
+  
   .gallery img {
     display: block;
-    object-fit: contain; /* Keeps images' original proportions */
+
     height: auto;
     max-height: calc(100vh / 3); /* Ensures images fit vertically */
     max-width: calc(100vw / 3); /* Ensures images fit horizontally */
@@ -353,6 +457,7 @@ body {
   width: 300px; /* Adjust width */
   height: 400px; /* Adjust height */
   overflow: hidden;
+  
 }
 
 .character-container img {
@@ -402,4 +507,63 @@ body {
 }
 :root {
   --vh: 1vh; /* Default to 1% of viewport height */
+}
+
+
+
+
+
+
+
+.image-container5 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.image-container5 img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail {
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.character {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+.image-container5:hover .thumbnail {
+  opacity: 0;
+}
+
+.image-container5:hover .background {
+  opacity: 1;
+}
+
+.image-container5:hover .character {
+  opacity: 1;
 }
