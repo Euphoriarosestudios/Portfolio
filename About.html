@@ -1,105 +1,54 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8" />
-        <meta name="keywords" content="portfolio, Digitial painter, animatior, Splash art">
-        
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <title>Euphoria Rose Studios - Digital Art Portfolio</title>
     
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="Images/rose logo.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Euphoria Rose Studios Website" />
-    <link rel="manifest" href="/Euphoria Rose Studios Website/site.webmanifest" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the captivating portfolio of Euphoria Rose Studios by Marwan Salah-Bennani. Discover stunning character designs, traditional art, and illustrations that ignite creativity.">
+    <meta name="keywords" content="portfolio, digital painter, animator, splash art, artist, character designer, Euphoria Rose Studios">
+    <meta name="author" content="Marwan Salah-Bennani">
     
+    <!-- Favicon -->
+    <link rel="icon" href="Images/rose logo.png" type="image/png">
     
-       
-    
-        <meta name="description" content="Explore the captivating portfolio of Euphoria Rose Studios by Marwan Salah-Bennani.
-         Discover stunning character designs, traditional art, and illustrations that ignite creativity. ">
-    
-    
-        <meta name="author" content="Marwan Salah-Bennani">
-    
-        <title>Euphoria Rose Studios</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Futura:wght@300&display=swap" rel="stylesheet">
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Futura:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/rose logo.png" alt="Company Logo" width="50" height="50">
+                    <span>Euphoria Rose</span>
+                </a>
+            </div>
             
-            <style>
-                
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
-        
-                .about-me-top {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 40px;
-                    background-color: #150021;
-                }
-        
-                .about-me-top .image-container {
-                    flex: 1 1 40%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 20px;
-                }
-        
-                .about-me-top .image-container img {
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                }
-        
-                .about-me-top .text-container {
-                    flex: 1 1 50%;
-                    padding: 20px;
-                }
-        
-                .about-me-top .text-container h1 {
-                    font-size: 2.5em;
-                    margin-bottom: 20px;
-                }
-        
-                .about-me-top .text-container p {
-                    font-size: 1.2em;
-                    line-height: 1.6;
-                    margin-bottom: 15px;
-                    color: #333;
-                }
-        
-                @media (max-width: 768px) {
-                    .about-me-top {
-                        flex-direction: column;
-                    }
-        
-                    .about-me-top .text-container h1 {
-                        font-size: 2em;
-                        text-align: center;
-                    }
-        
-                    .about-me-top .text-container p {
-                        font-size: 1em;
-                        text-align: center;
-                    }
-                }
-            </style>
-        </head>
-        <body>
-        
-            <section class="about-me-top">
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="paintings.html">Illustrations</a></li>
+                    <li><a href="character design.html">Character Design</a></li>
+                    <li><a href="animations.html">Animations</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <section class="about-me-top">
                 <!-- Placeholder Image Section -->
                 <div class="image-container">
                     <img src="Images/me.jpg" alt="Placeholder Image">
@@ -109,7 +58,7 @@
                 <div class="text-container">
                     <h1>Welcome to My Story</h1>
                     <p>
-                        Hi, I'm [Your Name], a passionate artist and creative soul who loves to bring ideas to life. My journey in the world of art has been a beautiful mix of discovery, learning, and endless creativity.
+                        Hi, I'm Marwan Salah-Bennani, a passionate artist and creative soul who loves to bring ideas to life. My journey in the world of art has been a beautiful mix of discovery, learning, and endless creativity.
                     </p>
                     <p>
                         From digital painting to character design, and even 2D animations, I believe art is a powerful way to communicate emotions and tell stories. My goal is to inspire others through my work and continue exploring new ways to express myself creatively.
@@ -119,88 +68,7 @@
                     </p>
                 </div>
             </section>
-        
-        </body>
 
-        
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #150021;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 40px 0;
-            padding: 20px;
-        }
-
-        
-
-        .text {
-            flex: 1;
-            min-width: 300px;
-            max-width: 600px;
-            padding: 20px;
-        }
-
-        .image {
-            flex: 1;
-            min-width: 300px;
-            max-width: 400px;
-            padding: 20px;
-        }
-
-        .image img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .title {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .section {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">
-            <img src="images/rose logo.png" alt="Euphoria Rose Studios Logo"> 
-            <h1></h1>
-            <a href="index.html">Euphoria Rose Studios</a>
-        </div>
-        <nav>
-         
-            <a href="digital paintings.html">Illustrations</a>
-            <a href="character design.html">Character Design</a>
-            <a href="#animations">Animations</a>
-            <a href="about.html">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
     <h1>Meet The</h1>
     <div class="section">
         <div class="text">
@@ -210,13 +78,13 @@
             </p>
         </div>
         <div class="image">
-            <img src="Images/Day and Night.jpg" alt="Artist image placeholder">
+            <img src="Images/(P17) Day and Night.jpg" alt="Artist image placeholder">
         </div>
     </div>
 
     <div class="section">
         <div class="image">
-            <img src="videos/animation.mp4" alt="Animator image placeholder">
+            <img src="Images/(P11) The Enchanted Trio The Blood Prince.jpg" alt="Animator image placeholder">
         </div>
         <div class="text">
             <h2 class="title">The Animator</h2>
@@ -235,10 +103,10 @@
         
         
         <div class="image">
-            <img src="Images/Character example sheet.png" alt="Character designer image placeholder">
+            <img src="Images/(P6) The power of Creation.jpg" alt="Character designer image placeholder">
         </div>
     </div>
-    <section id="my-qualifications" style="padding: 40px; background-color: #f9f9f9;">
+    <section id="my-qualifications" style="padding: 40px; background-color: #150021;">
         <div style="text-align: center; margin-bottom: 20px;">
           <h2 style="font-family: 'Cinzel', serif; font-size: 2.5em;">My Qualifications</h2>
           <p style="font-family: 'Futura Light', sans-serif; font-size: 1.2em; color: #555;">
@@ -253,18 +121,17 @@
         <div class="gallery">
             <img src="Certifications/(1) C.O.C. Character drawing course.jpg">
             <img src="Certifications/(2) C.O.C. Character Painting course.jpg">
+            <img src="Certifications/(3) C.O.C. The ultimate Digital Painting Course - Beginner to Advanced.jpg">
+            <img src="Certifications/(4) C.O.C. Digital Fantasy Portraits with Photoshop.png">
+            <img src="Certifications/(5) C.O.C. The ultimate Character Drawing Course - Beginner to Advanced.jpg">
+            <img src="Certifications/(6) C.O.C. Lighting and Color for Digital Portraits in Photoshop.png">
+            <img src="Certifications/(7) C.O.C. Draw and paint fantasy and scifi wifi weapons.jpg">
+            
 
         </div>
       </section>
-      
 
-
-
-
-
-
-  
-  <footer>
+      <footer>
     <!-- Footer Navigation Links -->
     <div class="footer-nav">
       <a href="#home">Home</a>
@@ -283,3 +150,8 @@
       Back to Top
     </button>
   </footer>
+
+  
+<script src="main.js"></script>
+</body>
+</html>
