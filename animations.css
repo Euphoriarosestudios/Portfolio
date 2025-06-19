@@ -1,121 +1,143 @@
-/* General Section Styling */
+/* Animations Page Styles */
 #splash-animations {
-    padding: 50px 20px;
-    background-color: #1a1a1a; /* Dark background for contrast */
-    color: #fff;
-    font-family: 'Futura Light', sans-serif;
-    text-align: center;
+  padding: 80px 20px 50px; /* Extra top padding for fixed header */
+  background-color: #150021; /* Dark purple background */
+  color: #fff;
+  font-family: 'Futura Light', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+  margin-bottom: 20px;
+  color: #ffb703; /* Gold color for titles */
+  letter-spacing: 2px;
+}
+
+.section-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #ccc;
+  padding: 0 20px;
+}
+
+/* Animation Gallery Styling */
+.animation-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 20px;
+}
+
+.animation-item {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.animation-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #8500a1; /* Purple accent */
+}
+
+.animation-info {
+  padding: 25px;
+  text-align: left;
+  background: linear-gradient(to bottom, #1a0a2e, #150021);
+}
+
+.animation-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: 15px;
+  color: #ffb703; /* Gold color */
+  letter-spacing: 1px;
+}
+
+.animation-description {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #splash-animations {
+    padding: 70px 15px 40px;
   }
   
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .section-description {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-  }
-  
-  /* Animation Gallery Styling */
   .animation-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
-  
-  .animation-item {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #000; /* Neutral background for videos */
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .animation-item video {
-    width: 100%;
-    height: auto;
-    display: block;
+    gap: 35px;
   }
   
   .animation-info {
     padding: 20px;
-    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  #splash-animations {
+    padding: 60px 10px 30px;
   }
   
-  .animation-name {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ffb703;
+  .animation-item {
+    border-radius: 10px;
   }
   
-  .animation-description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #ccc;
+  .animation-info {
+    padding: 15px;
   }
   
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Cinzel', serif;
-    color: white;
-    background-color: #150021;
-    overflow-x: hidden;
-    
+  .section-title {
+    margin-bottom: 15px;
   }
-  .homepage {
-    width: 100%; /* Replace 100vw */
-}header {
-    position: fixed; /* Keeps the header at the top of the page */
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-    
+  
+  .section-description {
+    margin-bottom: 30px;
   }
+}
 
-  header nav {
-    display: flex;
-    gap: 20px;
-  }
+/* Video Controls Enhancement */
+video::-webkit-media-controls {
+  background-color: rgba(0,0,0,0.5);
+}
 
-  header nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-family: 'Cinzel', serif;
-    transition: color 0.3s ease;
-  }
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-mute-button {
+  background-color: #8500a1;
+  border-radius: 50%;
+}
 
-  header nav a:hover {
-    color: #8500a1;
-  }
+/* Loading Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.animation-item {
+  animation: fadeIn 0.6s ease forwards;
+}
 
-  header .logo img {
-    height: 50px;
-    margin-right: 10px;
-  }
+.animation-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
 
-  header .logo h1 {
-    font-size: 1.5rem;
-    font-family: 'Cinzel', serif;
-    color: white;
-    margin: 0;
-  }
+.animation-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
