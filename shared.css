@@ -29,7 +29,6 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 1.2rem 0;
- 
     -webkit-backdrop-filter: blur(10px);
 }
 
@@ -113,6 +112,8 @@ body {
     width: 100%;
 }
 
+
+
 /* Hamburger menu styles */
 .hamburger {
     display: none;
@@ -135,6 +136,10 @@ body {
 .hamburger-line:not(:last-child) {
     margin-bottom: 5px;
 }
+
+
+
+
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
@@ -177,6 +182,7 @@ body {
     }
 }
 
+
 /* Accessibility focus styles */
 a:focus,
 button:focus {
@@ -184,73 +190,72 @@ button:focus {
     outline-offset: 3px;
 }
 
+.site-footer {
 
-/* ===== FOOTER STYLES ===== */
-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 3rem 2rem;
-    display: flex;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Futura', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: flex-start;
+
+  margin: 0 auto;
+  gap: 22px;
+    max-width: 1400px;
+      text-align: center; 
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  color: #e62ebd; /* Pinkish-violet for headers */
+  margin-bottom: 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #e62ebd;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    position: relative;
+    gap: 20px;
     text-align: center;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    width: 100%;
-}
 
-.footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    padding: 0.5rem;
-    position: relative;
-}
-
-.footer-nav a:hover {
-    color: #8500a1;
-}
-
-.footer-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #8500a1;
-    transition: width 0.3s ease;
-}
-
-.footer-nav a:hover::after {
-    width: 100%;
-}
 
 .social-media {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .social-media a {
@@ -258,11 +263,13 @@ footer {
     font-size: 1.5rem;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     transition: all 0.3s ease;
+      margin: 0 8px;
+
 }
 
 .social-media a:hover {
@@ -336,3 +343,35 @@ footer {
     }
 }
 
+
+/* UNIVERSAL GRADIENT UNDERLINE */
+.gradient-underline {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 95vw;
+}
+
+.gradient-underline::after {
+
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8500a1, transparent);
+}
+
+/* Optional: Adjust spacing for heading tags using the underline */
+.gradient-underline + * {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .gradient-underline::after {
+    width: 80vw;
+  }
+}
