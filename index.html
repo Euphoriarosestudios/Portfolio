@@ -19,13 +19,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Index.css">
 </head>
 <body>
-  <header class="main-header">
+  <!-- Page Loader -->
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">
+      <img src="Images/rose logo.png" alt="Euphoria Rose Logo">
+    </div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+    <p class="loader-text">Loading artwork...</p>
+  </div>
+</div>
+
+
+<header class="main-header">
         <div class="header-container">
             <div class="logo">
-                <a href="index.html">
+                <a href="Portfolio.html">
                     <img src="Images/rose logo.png" alt="Company Logo" width="50" height="50">
                     <span>Euphoria Rose</span>
                 </a>
@@ -39,15 +53,17 @@
             
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="paintings.html">Illustrations</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
                     <li><a href="character design.html">Character Design</a></li>
                     <li><a href="animations.html">Animations</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+ </header>
+
+    
 
 <div class="homepage">
             <div class="homepage-text">
@@ -56,198 +72,558 @@
                 <h2>Illustrator and Animator</h2>
             </div>
         </div>
+        
 
+<div class="gallery-controls">
+  <!-- Existing buttons -->
+  <button class="gallery-filter active" data-filter="all">All</button>
+  <button class="gallery-filter" data-filter="splash">Splash Art</button>
+  <button class="gallery-filter" data-filter="headshot">Headshots</button>
+  <!-- NEW WEAPONS BUTTON -->
+  <button class="gallery-filter" data-filter="weapons">Weapons</button>
+</div>
+<div class="gallery-grid">
+  <!-- Example item - add your actual images -->
+  <div class="gallery-item" data-category="splash" onclick="openModal('Truth')">
+    <img src="Images/(P16) Character Ignite Truth.jpg" alt="Truth"> </div>
 
+  <div class="gallery-item" data-category="splash" onclick="openModal('Fear')">
+    <img src="Images/(P16) Character Ignite Fear.jpg" alt="Fear"> </div>
 
- <section id="illustrations-section" class="gallery-section">
-    <h2>Illustrations</h2>
+<div class="gallery-item" data-category="splash" onclick="openModal('Noor_Layl')">
+    <img src="Images/(P17) Day and Night.jpg" alt="Noor And Layl"> </div> 
+
+<div class="gallery-item" data-category="splash" onclick="openModal('Hope')">
+    <img src="Images/(P16) Character Ignite Hope.jpg" alt="Hope"> </div>
+
+<div class="gallery-item" data-category="weapons" onclick="openModal('Crimson_Terror')">
+    <img src="wepons/Crimson Terror.jpg" alt="Crimson Terror"> </div>
+
+<div class="gallery-item" data-category="weapons" onclick="openModal('Weapons_Of_Fury')">
+    <img src="wepons/weapons Of fury.jpg" alt="Fear"> </div> 
+      
+<div class="gallery-item" data-category="splash" onclick="openModal('Blood')">
+    <img src="Images/(P16) Character Ignite Blood.jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="splash" onclick="openModal('Misty_Romance')">
+    <img src="Images/(P15) Misty Romance (2).jpg" alt="Fear"> </div> 
     
-    <div class="gallery-container">
-        <div class="gallery-grid">
-            <!-- Gallery items -->
-            <div class="gallery-item">
-                <img src="Images/(P16) Character Ignite Hope.jpg" 
-                     alt="Ignite Hope Splash Art" 
-                     data-date="01/01/2024" 
-                     data-method="Photoshop">
-                     
-            </div>
-            <div class="gallery-item">
-                <img src="Images/(P16) Character Ignite Hope.jpg" 
-                     alt="Ignite Hope Splash Art" 
-                     data-date="01/01/2024" 
-                     data-method="Photoshop">
-                     
-            </div>
-            <div class="gallery-item">
-                <img src="Images/(P16) Character Ignite Hope.jpg" 
-                     alt="Ignite Hope Splash Art" 
-                     data-date="01/01/2024" 
-                     data-method="Photoshop">
-                     
-            </div>
-            <div class="gallery-item">
-                <img src="Images/(P16) Character Ignite Hope.jpg" 
-                     alt="Ignite Hope Splash Art" 
-                     data-date="01/01/2024" 
-                     data-method="Photoshop">
-                     
-            </div>
-            
-            <!-- Repeat for other images -->
-        </div>
-    </div>
-</section>
+<div class="gallery-item" data-category="headshot" onclick="openModal('goku_black_headshot')">
+    <img src="Images/(8) Goku black [headshpot].jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="headshot" onclick="openModal('Seechen_headshot')">
+    <img src="Images/(4) Seechen [headshpot].jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="headshot" onclick="openModal('Rye_headshot')">
+    <img src="Images/(3) Rye [headshpot].jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="headshot" onclick="openModal('rose_quartz_headshot')">
+    <img src="Images/(6) Rose Quartz [headshpot].jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="headshot" onclick="openModal('ChronoScript_headshot')">
+    <img src="Images/(7) ChronoScript[headshpot].jpg" alt="Fear"> </div> 
 
 
-<!-- Popup Modal -->
-<div class="gallery-modal">
-    <span class="close-modal">&times;</span>
-    <span class="modal-nav prev">&#10094;</span>
-    <span class="modal-nav next">&#10095;</span>
-    <img class="modal-image" src="" alt="">
-    <div class="modal-info">
-        <p class="image-date"></p>
-        <p class="image-method"></p>
-    </div>
+
+
+
+    <!-- Close gallery-grid here (only ONE closing div) -->
 </div>
 
 
-<div class="animation-caption">
-        <h2>Animations</h2>
-        <p class="animation-description">
-            "Welcome to the Animations page, where creativity comes to life through motion and storytelling. 
-            Explore a showcase of dynamic animations that highlight the art of bringing ideas into vivid reality."
-<!-- Fullscreen Animations Section -->
-<section class="animation-section">
-    <div class="animation-video-container">
-        <video autoplay muted loop playsinline>
-            <source src="videos/animation.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-    </div>
     
-    
-        </p>
+  </div>
+</div>
+  <!-- Project Modal (Hidden by default) -->
+
+
+   <!-- Truth -->
+  <div id="Truth-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Truth</h2>
+    <p class="art-description">Verity trains herself with her staff for the time she must defend the ancient scrolls.</p>
+  </div>
+      <div class="process-steps">
+          <img src="Images/(P16) Character Ignite Truth.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Verity</p> </div>
+           <div class="art-info">  <p>Date: 21 November 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
     </div>
-</section>
-<!-- Character Selection Section -->
- <div class="animation-caption">
-        <h2>choose your character </h2>
-        <p class="animation-description">
-            "Welcome to the Animations page, where creativity comes to life through motion and storytelling. 
-            Explore a showcase of dynamic animations that highlight the art of bringing ideas into vivid reality."
-<div class="character-selection">
-    <div class="character-card">
-        <a href="character-design.html" class="character-link">
-            <!-- Thumbnail Image -->
-            <img src="Character Design/(C.I.) Truth COVER Alt.png" alt="Character Thumbnail" class="character-thumbnail">
-            
-            <!-- Background Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Desire.png" alt="Character Background" class="character-bg">
-            
-            <!-- Character Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Truth.jpg" alt="Character Art" class="character-art">
-            
-            <div class="character-overlay">
-                <h3>View Verity</h3>
-            </div>
-        </a>
-    </div>
-    <div class="character-card">
-        <a href="character-design.html" class="character-link">
-            <!-- Thumbnail Image -->
-            <img src="Character Design/(C.I.) Truth COVER Alt.png" alt="Character Thumbnail" class="character-thumbnail">
-            
-            <!-- Background Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Desire.png" alt="Character Background" class="character-bg">
-            
-            <!-- Character Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Truth.jpg" alt="Character Art" class="character-art">
-            
-            <div class="character-overlay">
-                <h3>View Faith</h3>
-            </div>
-        </a>
-    </div>
-    <div class="character-card">
-        <a href="character-design.html" class="character-link">
-            <!-- Thumbnail Image -->
-            <img src="Character Design/(C.I.) Truth COVER Alt.png" alt="Character Thumbnail" class="character-thumbnail">
-            
-            <!-- Background Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Desire.png" alt="Character Background" class="character-bg">
-            
-            <!-- Character Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Truth.jpg" alt="Character Art" class="character-art">
-            
-            <div class="character-overlay">
-                <h3>View The Blood Prince</h3>
-            </div>
-        </a>
-    </div>
-    <div class="character-card">
-        <a href="character-design.html" class="character-link">
-            <!-- Thumbnail Image -->
-            <img src="Character Design/(C.I.) Truth COVER Alt.png" alt="Character Thumbnail" class="character-thumbnail">
-            
-            <!-- Background Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Desire.png" alt="Character Background" class="character-bg">
-            
-            <!-- Character Image (shown on hover) -->
-            <img src="Images/(P16) Character Ignite Truth.jpg" alt="Character Art" class="character-art">
-            
-            <div class="character-overlay">
-                <h3>View Nafar</h3>
-            </div>
-            
-        </a>
-    </div>
-    <!-- Add more character cards as needed -->
+
+   <!-- Fear art piece-->
+<div id="Fear-modal" class="modal"> 
+  <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+
+   <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Fear</h2>
+    <p class="art-description">Nafar unleashes his unfathomable rage and anger upon the wildlife, using the power of fear, he will petrifiy anyone that gets in his way.</p>
+  </div>
+<span class="close-btn" onclick="closeModal('Fear')">&times;</span>
+
+<!-- This is the image and the date and version -->
+<div class="process-steps">
+  <div class="process-step">
+    <img src="Images/(P16) Character Ignite Fear.jpg" alt="Final Version"> </div>
+  <div class="art-info">  <p>Final</p> </div>
+  <div class="art-info">  <p>Date: 21 November 2023</p> </div>
 </div>
 
-<!-- About Me Section -->
-<section class="about-section">
-    <div class="about-content">
-        <h1>About Me</h1>
-        <p>
-            Hello! I'm [Your Name], a passionate artist and the creative force behind Euphoria Rose Studios. 
-            My work spans digital painting, character design, animations, and illustrations. 
-            Art has been my language for self-expression and storytelling since childhood. 
-            I strive to bring emotion, beauty, and meaning to every piece I create.
-        </p>
-        <p>
-            When I'm not creating, you can find me exploring the wonders of nature, experimenting with new 
-            artistic techniques, or diving into my favorite stories for inspiration. Thank you for visiting 
-            my portfolio and sharing in the joy of art!
-        </p>
-    </div>
-    <div class="about-image">
-        <img src="Images/me.jpg" alt="Portrait of [Your Name]">
-    </div>
-</section>
+  <!-- This is the end for 1 image -->
+<!-- This is the image and the date and version -->
+<div class="process-steps">
+  <div class="process-step">
+    <img src="Images/(P16) Character Ignite Truth.jpg" alt="Final Version">
+  </div>
+  <div class="art-info">  <p>Final: March 2023</p>  </div>
+</div>
 
-<footer>
-    <!-- Footer Navigation Links -->
-    <div class="footer-nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+<div class="process-steps">
+  <div class="process-step">
+    <img src="Images/(P16) Character Ignite Truth.jpg" alt="Final Version">
+  </div>
+  <div class="art-info">  <p>Final: March 2023</p>  </div>
+</div>
+        <!-- this is the end DIVS... -->
+</div>
+</div>
+
+   <!-- Day and night -->
+  <div id="Noor_Layl-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Day And Night</h2>
+    <p class="art-description">Two knights that protect their homes, Noor the white knights power grows in the day and her gentle soul brings calmness to the innocent, her sister Layl instills fear into the hearts of evil when her power grows at night, together they bring peace and hope.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Noor_Layl')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(P17) Day and Night.jpg" alt="Final Version"> </div>
+                 <div class="art-info">  <p>Noor and Layl </p> </div>
+          <div class="art-info">  <p>Date:24 July 2024 </p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
     </div>
 
+    <!-- Hope -->
+  <div id="Hope-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Hope</h2>
+    <p class="art-description">faith rests in the forest, unbothered by anything as she continues to impress herself with her powers.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Hope')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(P16) Character Ignite Hope.jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p>Faith</p> </div>
+          <div class="art-info">  <p>Date:21 November 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+    
+      <!-- Crimson Terror -->
+ <div id="Crimson_Terror-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Crimson Terror</h2>
+    <p class="art-description"></p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Crimson_Terror')">&times;</span>
+      <div class="process-steps">
+          <img src="wepons/Crimson Terror.jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p> Crimson Terror </p> </div>
+          <div class="art-info">  <p>Date: 7 August 2022 </p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+      <!-- weaposn of fury -->
+   <div id="Weapons_Of_Fury-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Weapons Of Fury</h2>
+    <p class="art-description"></p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Weapons_Of_Fury')">&times;</span>
+      <div class="process-steps">
+          <img src="wepons/weapons Of fury.jpg" alt="Final Version"> </div>
+            <div class="art-info">  <p>Weapons of fury</p> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+       <!-- Blood -->
+   <div id="Blood-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Blood</h2>
+    <p class="art-description">The Blood Prince awakens his true power, using his power of blood to wreak havoc upon all that gets in his way, especially his brother.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Blood')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(P16) Character Ignite Blood.jpg" alt="Final Version"> </div>
+                   <div class="art-info">  <p>The Blood Prince</p> </div>
+          <div class="art-info">  <p>Date: 21 November 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+      <!-- Misty Romance -->
+   <div id="Misty_Romance-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Misty Romance</h2>
+    <p class="art-description">The Nymphonus. A creature similar to humans but are generally taller, have a tail and wings and are more affectionate than humans. They are just like humans, most good, some bad.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Misty_Romance')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(P15) Misty Romance (2).jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p>Cynthia</p> </div>
+          <div class="art-info">  <p>Date: 5 June 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+  <!-- Goku black Headshot-->
+   <div id="goku_black_headshot-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Goku Black</h2>
+    <p class="art-description"></p>
+  </div>
+      <span class="close-btn" onclick="closeModal('goku_black_headshot')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(8) Goku black [headshpot].jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p>Goku Black</p> </div>
+          <div class="art-info">  <p>Date: 16 May 2025</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+     <!-- Seechen Headshot -->
+   <div id="Seechen_headshot-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Seechen</h2>
+    <p class="art-description">Seechen is a former princess in the story of "The Enchanted Scrolls." The princess was deposed after her cruelty led to an uprising. as a result, she went to the ancient temple to try to change history through the scrolls of time. Upon finding the scrolls, she bore witness to something so indescribable that she had to remove her eyes, but fret not—she can still see.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Seechen_headshot')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(4) Seechen [headshpot].jpg" alt="Final Version"> </div>
+        <div class="art-info">  <p>Seechen</p> </div>
+          <div class="art-info">  <p>Date: 5 February 2025</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+      <!-- Rye Headshot-->
+   <div id="Rye_headshot-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Rye</h2>
+    <p class="art-description">Rye, once a normal man who nearly suffered a tragic fate, almost losing his beloved wife as a result of Nafars Rampage, but now imbued with the soul of tranquility, he fights to protect everyone he can, in hopes of killing Nafar and curing his Wife.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('Rye_headshot')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(3) Rye [headshpot].jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p>Rye</p> </div>
+          <div class="art-info">  <p>Date: 28 January 2025</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+      <!-- Rose quartz Headshot-->
+   <div id="rose_quartz_headshot-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">Rose Quartz</h2>
+    <p class="art-description">you can never be too careful with someone with ulterior motives. </p>
+  </div>
+      <span class="close-btn" onclick="closeModal('rose_quartz_headshot')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(6) Rose Quartz [headshpot].jpg" alt="Final Version"> </div>
+                    <div class="art-info">  <p>Rose Quartz</p> </div>
+          <div class="art-info">  <p>Date: 5 February 2025</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+          <!-- ChronoScript Headshot-->
+   <div id="ChronoScript_headshot-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">ChronoScript</h2>
+    <p class="art-description">Two knights that protect their homes, Noor the white knights power grows in the day and her gentle soul brings calmness to the innocent, her sister Layl instills fear into the hearts of evil when her power grows at night, together they bring peace and hope.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('ChronoScript_headshot')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/(7) ChronoScript[headshpot].jpg" alt="Final Version"> </div>
+                 <div class="art-info">  <p>ChronoScript</p> </div>
+                 <div class="art-info">  <p>Date: 1 April 2025</p> </div>
+                    <div class="art-info">  <p>Artist Note:Credits: for the background, the Image was taken from Janko Ferlic on unsplash</p> </div>
+
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+    
+    
+
+
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Euphoria Rose</h3>
+      <p>I am an illustrator that specializes in digital and traditional art with experience in graphic design. This portfolio encapsulates all of that and more, stay tuned.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Email</h3>
+      <p><a href="mailto:euphoriarosestudios@gmail.com">euphoriarosestudios@gmail.com</a></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Menu</h3>
+      <ul>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Socials</h3>
+      <ul>
+    
     <div class="social-media">
         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
+      </ul>
+    </div>
+ 
+
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
       Back to Top
     </button>
-  </footer>
+ </div>
+</footer>
 
-  
-<script src="main.js"></script>
+
+<script src="Index.js"></script>
+
 </body>
 </html>
