@@ -39,22 +39,30 @@
 <header class="main-header">
         <div class="header-container">
             <div class="logo">
-                <a href="Portfolio.html">
+                <a href="Index.html">
                     <img src="Images/rose logo.png" alt="Company Logo" width="50" height="50">
                     <span>Euphoria Rose</span>
                 </a>
             </div>
             
-            <button class="hamburger" aria-label="Menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+     <header>
+  <button class="hamburger" id="hamburger-btn">&#9776;</button>
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul>
+ <li><a href="Index.html">Portfolio</a></li>
+                    <li><a href="Newcharacterdesign.html">Character Design</a></li>
+                    <li><a href="animations.html">Animations</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
             
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="Portfolio.html">Portfolio</a></li>
-                    <li><a href="character design.html">Character Design</a></li>
+                    <li><a href="Index.html">Portfolio</a></li>
+                    <li><a href="Newcharacterdesign.html">Character Design</a></li>
                     <li><a href="animations.html">Animations</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -97,10 +105,10 @@
     <img src="Images/(P16) Character Ignite Hope.jpg" alt="Hope"> </div>
 
 <div class="gallery-item" data-category="weapons" onclick="openModal('Crimson_Terror')">
-    <img src="wepons/Crimson Terror.jpg" alt="Crimson Terror"> </div>
+    <img src="Images/Weapons_Crimson Terror.jpg" alt="Crimson Terror"> </div>
 
 <div class="gallery-item" data-category="weapons" onclick="openModal('Weapons_Of_Fury')">
-    <img src="wepons/weapons Of fury.jpg" alt="Fear"> </div> 
+    <img src="Images/Weapons_weapons Of fury.jpg" alt="Fear"> </div> 
       
 <div class="gallery-item" data-category="splash" onclick="openModal('Blood')">
     <img src="Images/(P16) Character Ignite Blood.jpg" alt="Fear"> </div> 
@@ -122,6 +130,10 @@
 
 <div class="gallery-item" data-category="headshot" onclick="openModal('ChronoScript_headshot')">
     <img src="Images/(7) ChronoScript[headshpot].jpg" alt="Fear"> </div> 
+
+<div class="gallery-item" data-category="weapons" onclick="openModal('The_BossMan')">
+    <img src="Images/Weapons_The Devils Right Hand Man and THe BossMan.jpg" alt="Fear"> </div> 
+
 
 
 
@@ -292,7 +304,7 @@
   </div>
       <span class="close-btn" onclick="closeModal('Crimson_Terror')">&times;</span>
       <div class="process-steps">
-          <img src="wepons/Crimson Terror.jpg" alt="Final Version"> </div>
+          <img src="Images/Weapons_Crimson Terror.jpg" alt="Final Version"> </div>
                     <div class="art-info">  <p> Crimson Terror </p> </div>
           <div class="art-info">  <p>Date: 7 August 2022 </p> </div>
             <!-- This is the end for 1 image -->
@@ -324,7 +336,7 @@
   </div>
       <span class="close-btn" onclick="closeModal('Weapons_Of_Fury')">&times;</span>
       <div class="process-steps">
-          <img src="wepons/weapons Of fury.jpg" alt="Final Version"> </div>
+          <img src="Images/Weapons_weapons Of fury.jpg" alt="Final Version"> </div>
             <div class="art-info">  <p>Weapons of fury</p> </div>
           <div class="art-info">  <p>Final: March 2023</p> </div>
             <!-- This is the end for 1 image -->
@@ -429,7 +441,7 @@
             <!-- This is the end for 1 image -->
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
+          <img src="Process/Process_1_Goku black,rendering.jpg" alt="Final Version"> </div>
           <div class="art-info">  <p>Final: March 2023</p> </div>
 
         <div class="process-steps">
@@ -576,6 +588,43 @@
       </div>
     </div>
 
+            <!-- The_BossMan guns-->
+   <div id="The_BossMan-modal" class="modal">
+    <div class="modal-content">
+       <!-- This is for the buttons -->
+
+  <button class="nav-arrow left-arrow" onclick="navigateModal(-1)">❮</button>
+  <button class="nav-arrow right-arrow" onclick="navigateModal(1)">❯</button>
+ 
+    <!-- this is the title and descytion -->
+  <div class="art-header">
+    <h2 class="art-title">The Bossmans Guns</h2>
+    <p class="art-description">Two knights that protect their homes, Noor the white knights power grows in the day and her gentle soul brings calmness to the innocent, her sister Layl instills fear into the hearts of evil when her power grows at night, together they bring peace and hope.</p>
+  </div>
+      <span class="close-btn" onclick="closeModal('The_BossMan')">&times;</span>
+      <div class="process-steps">
+          <img src="Images/Weapons_The Devils Right Hand Man and THe BossMan.jpg" alt="Final Version"> </div>
+                 <div class="art-info">  <p>THe devils Right Hand Man And THe Bossman</p> </div>
+                 <div class="art-info">  <p>Date: 11 august 2022</p> </div>
+                    <div class="art-info">  <p>Artist Note:Credits: for the background, the Image was taken from Janko Ferlic on unsplash</p> </div>
+
+          <div class="art-info">  <p>Final: March 2023</p> </div>
+            <!-- This is the end for 1 image -->
+
+        <div class="process-steps">
+          <img src="Images/Weapons_The Devils Right Hand Man.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>The Devils Right Hand Man</p> </div>
+
+        <div class="process-steps">
+          <img src="Images/Weapons_The Bossman.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>The BossMan</p> </div>
+
+        <!-- this is the end DIVS... -->
+
+      </div>
+    </div>
+
+
     
     
 
@@ -596,8 +645,8 @@
     <div class="footer-column">
       <h3>Quick Menu</h3>
       <ul>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="Index.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="#">Services</a></li>
       </ul>
     </div>
@@ -607,9 +656,9 @@
       <ul>
     
     <div class="social-media">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/euphoriarosestudios/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://x.com/EuphoriaRose" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
       </ul>
     </div>
