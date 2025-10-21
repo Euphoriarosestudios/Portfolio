@@ -15,11 +15,15 @@
     <link rel="icon" href="Images/rose logo.png" type="image/png">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Futura:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="Universal.css">
     <link rel="stylesheet" href="Index.css">
+
+
+
 </head>
 <body>
   <!-- Page Loader -->
@@ -35,50 +39,46 @@
   </div>
 </div>
 
-
 <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="Index.html">
-                    <img src="Images/rose logo.png" alt="Company Logo" width="50" height="50">
-                    <span>Euphoria Rose</span>
-                </a>
-            </div>
-            
-     <header>
-  <button class="hamburger" id="hamburger-btn">&#9776;</button>
-  <nav class="mobile-nav" id="mobile-nav">
-    <ul>
- <li><a href="Index.html">Portfolio</a></li>
-                    <li><a href="Newcharacterdesign.html">Character Design</a></li>
-                    <li><a href="animations.html">Animations</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="header-container">
+    <div class="logo">
+      <a href="Index.html">
+        <img src="Images/rose logo.png" alt="Euphoria Rose Logo" width="50" height="50">
+
+      </a>
+    </div>
+
+    <!-- replaced nested header with a nav and renamed inner logo to brand -->
+    <nav class="navbar" aria-label="Primary">
+      <div class="brand">Euphoria Rose Studios</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Portfolio</a>
+        <a href="character-design.html">Character Design</a>
+        <a href="Index.html#filter=animations">Animations</a>
+        <a href="about.html">About</a>
+        <a href="about.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+  </div>
 </header>
 
-            
-            <nav class="main-nav" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="Index.html">Portfolio</a></li>
-                    <li><a href="Newcharacterdesign.html">Character Design</a></li>
-                    <li><a href="animations.html">Animations</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
- </header>
 
-    
 
 <div class="homepage">
-            <div class="homepage-text">
-                <h1>Euphoria Rose Studios</h1>
-                <div class="decorative-line"></div>
-                <h2>Illustrator and Animator</h2>
-            </div>
+          
+            <div class="golden-portfolio-header">
+  <div class="golden-subtitle">Euphoria Rose Studios</div>
+  <div class="golden-divider"></div>
+  <div class="golden-title">Portfolio</div>
+</div>
+
         </div>
         
 
@@ -87,7 +87,7 @@
   <button class="gallery-filter active" data-filter="all">All</button>
   <button class="gallery-filter" data-filter="splash">Splash Art</button>
   <button class="gallery-filter" data-filter="headshot">Headshots</button>
-  <!-- NEW WEAPONS BUTTON -->
+ <button class="gallery-filter" data-filter="animations">Euphoria-Arts</button>
   <button class="gallery-filter" data-filter="weapons">Weapons</button>
 </div>
 <div class="gallery-grid">
@@ -118,6 +118,7 @@
     
 <div class="gallery-item" data-category="headshot" onclick="openModal('goku_black_headshot')">
     <img src="Images/(8) Goku black [headshpot].jpg" alt="Fear"> </div> 
+    
 
 <div class="gallery-item" data-category="headshot" onclick="openModal('Seechen_headshot')">
     <img src="Images/(4) Seechen [headshpot].jpg" alt="Fear"> </div> 
@@ -134,7 +135,12 @@
 <div class="gallery-item" data-category="weapons" onclick="openModal('The_BossMan')">
     <img src="Images/Weapons_The Devils Right Hand Man and THe BossMan.jpg" alt="Fear"> </div> 
 
+    
+    <div class="gallery-item" data-category="animations" id="euphoria-arts">
+  <video controls width="100%" preload="metadata" poster="preview.jpg">
+    <source src="videos/animation.mp4" type="video/mp4">
 
+  </video>
 
 
 
@@ -441,12 +447,32 @@
             <!-- This is the end for 1 image -->
 
         <div class="process-steps">
-          <img src="Process/Process_1_Goku black,rendering.jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_6_ Goku black.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>prefinal</p> </div>
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_5_Goku blackflat color render.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>color rendering</p> </div>
+          
+        <div class="process-steps">
+          <img src="Process/Process_4_Goku black,rendering 2.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>color flats</p> </div>
+          
+        <div class="process-steps">
+          <img src="Process/Process_4_Goku blackflat color.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>rendering 2</p> </div>
+          
+        <div class="process-steps">
+          <img src="Process/Process_3_Goku black,rendering.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>rendering</p> </div>
+          
+        <div class="process-steps">
+          <img src="Process/Process_2_Goku black, flat shadows.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>flat shadows</p> </div>
+          
+        <div class="process-steps">
+          <img src="Process/Process_1_Goku black, sketch.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>sketch</p> </div>
 
         <!-- this is the end DIVS... -->
 
@@ -474,12 +500,24 @@
             <!-- This is the end for 1 image -->
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_4_Seechen_prefinal.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>PreFinal</p> </div>
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_3_Seechen_flat_shadows.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Rough colour rendering</p> </div>
+          
+           <div class="process-steps">
+          <img src="Process/Process_2_Seechen_flat_shadows.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>rough rendering</p> </div>
+          
+           <div class="process-steps">
+          <img src="Process/Process_1_Seechen_Sketch.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Sketch</p> </div>
+
+           <div class="process-steps">
+          <img src="Process/Process_0_Seechen_Thumbnail.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Thumbnail</p> </div>
 
         <!-- this is the end DIVS... -->
 
@@ -507,12 +545,12 @@
             <!-- This is the end for 1 image -->
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_2_Rye_render.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Prefinal</p> </div>
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_1_Rye_intial Sketch.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Intial sketch</p> </div>
 
         <!-- this is the end DIVS... -->
 
@@ -576,12 +614,28 @@
             <!-- This is the end for 1 image -->
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_6_ChronoScript_color render.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>Prefinal</p> </div>
 
         <div class="process-steps">
-          <img src="Images/(P14) Golden Facade (2).jpg" alt="Final Version"> </div>
-          <div class="art-info">  <p>Final: March 2023</p> </div>
+          <img src="Process/Process_5_ChronoScript_color.png" alt="Final Version"> </div>
+          <div class="art-info">  <p>color rendering</p> </div>
+
+               <div class="process-steps">
+          <img src="Process/Process_4_ChronoScript_rendering 2.png" alt="Final Version"> </div>
+          <div class="art-info">  <p>rendering 2</p> </div>
+
+               <div class="process-steps">
+          <img src="Process/Process_3_ChronoScript_rendering.png" alt="Final Version"> </div>
+          <div class="art-info">  <p>rendering </p> </div>
+
+               <div class="process-steps">
+          <img src="Process/Process_2_ChronoScript_flat_shadows.jpg" alt="Final Version"> </div>
+          <div class="art-info">  <p>flat shadows</p> </div>
+
+                         <div class="process-steps">
+          <img src="Process/Process_1_ChronoScript.png" alt="Final Version"> </div>
+          <div class="art-info">  <p>Sketch</p> </div>
 
         <!-- this is the end DIVS... -->
 
@@ -673,6 +727,8 @@
 
 
 <script src="Index.js"></script>
+<script src="Universal.js"></script>
+
 
 </body>
 </html>
